@@ -1,0 +1,114 @@
+.header {
+  display: flex;
+  // flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 1.5rem;
+  padding-left: 4rem;
+  line-height: 2.2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  left: 0;
+  z-index: 20;
+  right: 0;
+  height: 3.6rem;
+  background-color: #fff;
+  box-sizing: border-box;
+  border-bottom: 1px solid #eaecef;
+
+  @media screen and (min-width: 980px) {
+    padding-left: 1.5rem;
+  }
+
+  &__sidebar-button {
+    display: block;
+    cursor: pointer;
+    width: 1.25rem;
+    height: 1.25rem;
+    position: absolute;
+    padding: 0.6rem;
+    top: 0;
+    left: 1rem;
+    border: none;
+    background: none;
+
+    @media screen and (min-width: 980px) {
+      display: none;
+    }
+  }
+
+  &__logo {
+    // width: 10%;
+  }
+
+  &__logo-image {
+    @media screen and (max-width: 1024px) {
+      max-width: 100%;
+    }
+  }
+
+  .search {
+    &__input {
+      cursor: pointer;
+      width: 0;
+      border-color: transparent;
+      position: relative;
+      height: 2rem;
+      color: #4e6e8e;
+      display: inline-block;
+      border-radius: 2rem;
+      margin-right: 1rem;
+      font-size: 0.9rem;
+      line-height: 2rem;
+      padding: 0 0.5rem 0 2rem;
+      outline: none;
+      transition: all 0.2s ease;
+      background: #fff url(../../../../assets/svgs/search.83621669.svg) 0.6rem 0.5rem no-repeat;
+      background-size: 1rem;
+
+      @media screen and (min-width: 1024px) {
+        cursor: text;
+        width: 10rem;
+        border: 1px solid #cfd4db;
+      }
+    }
+  }
+
+  .nav {
+    display: none;
+
+    @media screen and (min-width: 980px) {
+      display: block;
+    }
+
+    &__list {
+      display: flex;
+      padding: 0;
+      margin: 0;
+
+      &-item {
+        list-style: none;
+
+        &:not(:first-child) {
+          margin-left: 1.5rem;
+        }
+      }
+
+      &-link {
+        font-size: 0.7rem;
+        font-weight: normal;
+        letter-spacing: 0.05em;
+        line-height: 1.4rem;
+        color: #34495e;
+        text-transform: uppercase;
+        padding: 0.125rem 0.5rem;
+
+        &.active,
+        &:hover {
+          border-bottom: 2px solid rgb(6, 188, 255);
+        }
+      }
+    }
+  }
+}
